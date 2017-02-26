@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+
+  $errorCode = $_GET['error'];
+
+?>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -19,7 +24,17 @@
     
 
     <div class="container">
-    <!-- TODO Implement rigth form data -->
+    <?php
+      //Error 1: Password or username wrong/misspelled
+      if ($errorCode == 1) {
+         echo "<div class='alert alert-danger' role='alert'><strong>Oh snap!</strong> Change a few things up and try submitting again.</div>";
+      }
+      //Error 2: Database connection error
+      else if($errorCode == 2){
+          echo "<div class='alert alert-danger' role='alert'><strong>No way!</strong> Somebody cut the wire to the database.</div>";
+      }
+
+    ?>
       <form class="form-signin"  method="POST" action="login.php">
         <div class="siimple-h2">Login</div>
         <label for="inputEmail" class="sr-only">Email address</label>
