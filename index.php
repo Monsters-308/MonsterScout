@@ -10,6 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- TODO Add content meta data & favicon -->
+    <title>MonsterScout</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/siimple/2.0.0/siimple.min.css">    
     <!-- Bootstrap CSS -->
