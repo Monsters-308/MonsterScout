@@ -3,7 +3,7 @@ body {
   padding-bottom: 40px;
   background-color: #eee;
   font-family: 'Montserrat', sans-serif;
-
+  margin-bottom: 60px;
 }
 
 .form-signin {
@@ -33,13 +33,9 @@ body {
   margin-top: 10px;
 }
 
-.submitButton{
-  margin-top: 10px;
-}
-
 .core-colors {
-  display: inline-block;
-  width: 300px;
+  display: table-cell;
+
   border-radius: 5px;
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
@@ -52,3 +48,13 @@ body {
   background-color: #4894f0;
   color: #FFF;
 }
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  /* Set the fixed height of the footer here */
+   /* Vertically center the text there */
+}
+
