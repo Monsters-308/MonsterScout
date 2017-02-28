@@ -38,23 +38,25 @@
     <?php
       //Error 1: Password or username wrong/misspelled
       if ($errorCode == 1) {
-         echo "<div class='alert alert-danger' role='alert' id='alert'><strong>Oh snap!</strong> Change a few things up and try submitting again.<button type='button' class='close' data-dismiss='alert' aria-label='Close'>
-  <span aria-hidden='true'>&times;</span></button></div>";
+         echo "<div class='alert alert-danger' role='alert' id='alert'><strong>Oh snap!</strong> Change a few things up and try submitting again.<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>";
       }
       //Error 2: Database connection error
       else if($errorCode == 2){
-          echo "<div class='alert alert-danger' role='alert' id='alert'><strong>No way!</strong> Somebody cut the wire to the database.<button type='button' class='close' data-dismiss='alert' aria-label='Close'>
-  <span aria-hidden='true'>&times;</span></button></div>";
+        echo "<div class='alert alert-danger' role='alert' id='alert'><strong>No way!</strong> Somebody cut the wire to the database.<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>";
+      }
+      //Error 3: Internal error
+      else if($errorCode == 3){
+        echo "<div class='alert alert-danger' role='alert' id='alert'><strong>Sorry!</strong> We have an internal error!<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>";
       }
 
     ?>
       <form class="form-signin"  method="POST" action="login.php">
         <div class="siimple-h2">Login</div>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="siimple-input form-control" placeholder="Email address" required autofocus>
+        <label for="email" class="sr-only">Email address</label>
+        <input type="email" id="email" class="siimple-input form-control" placeholder="Email address" name="email" required autofocus>
 
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="siimple-input form-control" placeholder="Password" required>
+        <label for="password" class="sr-only">Password</label>
+        <input type="password" id="password" class="siimple-input form-control" placeholder="Password" name="password" required>
         <button type="submit" class="core-colors btn-block" id="submitButton">Submit</button>
       </form>
       
